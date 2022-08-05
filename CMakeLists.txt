@@ -9,4 +9,5 @@ project ("OpenGL")
 add_subdirectory ("1.Setup")
 add_subdirectory("2.FirstTriangle")
 add_subdirectory("3.Transformations")
+add_subdirectory("4.Interpolation")
 
