@@ -14,7 +14,7 @@ m_indices{indices}
             glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
             glEnableVertexAttribArray(0);
         }
-        glBindBuffer(GL_ARRAY_BUFFER, 0); // Legit to unbing here as there is more than one EBO
+        glBindBuffer(GL_ARRAY_BUFFER, 0); // Legit to unbind here as there is more than one ABO
         glGenBuffers(1, &m_EBO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
         {

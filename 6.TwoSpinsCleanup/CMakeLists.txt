@@ -18,14 +18,13 @@ include_directories(${GLM_INCLUDE_DIRS})
 # Add source to this project's executable.
 set(SOURCES main.cpp 
             Mesh.cpp
-            Mesh.h)
+            Mesh.h
+            Window.cpp
+            Window.h 
+            Shaders.h 
+            Shaders.cpp)
             
 add_executable (TwoSpins ${SOURCES} )
 target_link_libraries(TwoSpins PRIVATE glfw ${GLEW_LIBRARIES} ${OPENGL_LIBRARIES})
-
-
-
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET Setup PROPERTY CXX_STANDARD 20)
-endif()
+set_property(TARGET TwoSpins PROPERTY CXX_STANDARD 20)
 

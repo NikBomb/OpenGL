@@ -1,3 +1,8 @@
+#ifndef MESH_H
+#define MESH_H
+
+
+
 #include <vector>
 #include <gl/glew.h>
 #include <glm\mat4x4.hpp>
@@ -8,6 +13,7 @@
 class Mesh {
     public:
     Mesh(const std::vector<GLfloat>& vertices, const std::vector<unsigned int>& indices);
+    glm::mat4 model{ 1.0f };
     void draw() const;
     private:
 
@@ -18,3 +24,5 @@ class Mesh {
     std::vector<GLfloat> m_vertices;
 
 };
+
+#endif
